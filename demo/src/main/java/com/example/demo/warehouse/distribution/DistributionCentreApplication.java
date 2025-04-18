@@ -24,7 +24,7 @@ public class DistributionCentreApplication {
     public CommandLineRunner loadDevData(DistributionCentreRepository distributionCentreRepository, 
                                       ItemRepository itemRepository) {
         return args -> {
-            // Create distribution centers
+            
             DistributionCentre centre1 = new DistributionCentre(null, "North Distribution Center", 51.5074, -0.1278, new ArrayList<>());
             DistributionCentre centre2 = new DistributionCentre(null, "South Distribution Center", 40.7128, -74.0060, new ArrayList<>());
             DistributionCentre centre3 = new DistributionCentre(null, "East Distribution Center", 35.6762, 139.6503, new ArrayList<>());
@@ -35,7 +35,7 @@ public class DistributionCentreApplication {
             distributionCentreRepository.save(centre3);
             distributionCentreRepository.save(centre4);
             
-            // Add items to centres
+            
             Item item1 = new Item(null, "T-Shirt", "Nike", "M", "Black", 29.99, 20, centre1);
             Item item2 = new Item(null, "Jeans", "Levis", "32x32", "Blue", 59.99, 15, centre1);
             Item item3 = new Item(null, "Hoodie", "Adidas", "L", "Gray", 49.99, 10, centre2);
@@ -61,7 +61,7 @@ public class DistributionCentreApplication {
     public CommandLineRunner loadQaData(DistributionCentreRepository distributionCentreRepository, 
                                       ItemRepository itemRepository) {
         return args -> {
-            // Create distribution centers with different data for QA environment
+            
             DistributionCentre centre1 = new DistributionCentre(null, "QA North Centre", 52.5074, -1.1278, new ArrayList<>());
             DistributionCentre centre2 = new DistributionCentre(null, "QA South Centre", 41.7128, -75.0060, new ArrayList<>());
             DistributionCentre centre3 = new DistributionCentre(null, "QA East Centre", 36.6762, 140.6503, new ArrayList<>());
@@ -72,7 +72,7 @@ public class DistributionCentreApplication {
             distributionCentreRepository.save(centre3);
             distributionCentreRepository.save(centre4);
             
-            // QA test data
+            
             Item item1 = new Item(null, "QA T-Shirt", "Nike", "M", "Black", 29.99, 20, centre1);
             Item item2 = new Item(null, "QA Jeans", "Levis", "32x32", "Blue", 59.99, 15, centre1);
             Item item3 = new Item(null, "QA Hoodie", "Adidas", "L", "Gray", 49.99, 10, centre2);
